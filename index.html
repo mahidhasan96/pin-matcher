@@ -23,23 +23,23 @@
                         <div class="calc-body">
                             <div class="calc-button-row">
                               <div onclick="inputNumber(this.innerText)" class="button">7</div>
-                              <div class="button">8</div>
-                              <div class="button">9</div>
+                              <div onclick="inputNumber(this.innerText)" class="button">8</div>
+                              <div onclick="inputNumber(this.innerText)" class="button">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">4</div>
-                              <div class="button">5</div>
-                              <div class="button">6</div>
+                              <div onclick="inputNumber(this.innerText)"class="button">4</div>
+                              <div onclick="inputNumber(this.innerText)" class="button">5</div>
+                              <div onclick="inputNumber(this.innerText)" class="button">6</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">1</div>
-                              <div class="button">2</div>
-                              <div class="button">3</div>
+                              <div onclick="inputNumber(this.innerText)" class="button">1</div>
+                              <div onclick="inputNumber(this.innerText)" class="button">2</div>
+                              <div onclick="inputNumber(this.innerText)" class="button">3</div>
                             </div>
                             
                             <div class="calc-button-row">
                                 <div class="button"><</div>
-                                <div class="button">0</div>
+                                <div onclick="inputNumber(this.innerText)"class="button">0</div>
                                 <div class="button">C</div>
                             </div>
                             <div>
@@ -67,10 +67,9 @@
             document.getElementById("showInput").value = result;
 
         });
-       document.getElementById("inputData").value = '';
        function inputNumber(number){
-          let display = document.getElementById("inputData").value;
-          display.value = display + number;
+          let display = number
+          document.getElementById('inputData').value+= display;
        }
             
         
