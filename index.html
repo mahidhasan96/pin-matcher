@@ -58,7 +58,9 @@
    
 
     <Script>
-        //
+
+        //adding genarate pin input number.
+
         const addInput = document.getElementById("addInput");
         addInput.addEventListener("click", function(){
             const showInputNumber = document.getElementById("showInput").value;
@@ -68,22 +70,26 @@
             document.getElementById("showInput").value = result;
 
         });
+        //adding ten digit input number.
+
        function inputNumber(number){
           let display = number
           document.getElementById('inputData').value+= display;
        }
-           
+           // compare two input number.
+
            document.getElementById("pinMatch").addEventListener("click", function(){
-            const firstInputNumber = document.getElementById("firstInput").value;
-            const secondInputNumber = document.getElementById("secondInput").value;
-                  if(firstInputNumber === secondInputNumber){
-                    const secondInput = document.getElementById("secondInput");
-                    secondInput.style.display = "block";
+            const firstInputNumber = document.getElementById("showInput").value;
+            const secondInputNumber = document.getElementById("inputData").value;
+                  
+            if(firstInputNumber === secondInputNumber){
+                document.getElementById("secondInput").style.display = 'block';
+                document.getElementById("firstInput").style.display = 'none';
 
             }
             else{
-                const firstInput = document.getElementById("firstInput");
-                firstInput.style.display = "block";
+                document.getElementById("firstInput").style.display = 'block';
+                document.getElementById("secondInput").style.display = 'none';
             }
            });
          
