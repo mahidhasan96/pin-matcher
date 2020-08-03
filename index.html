@@ -61,10 +61,10 @@
 
         //adding genarate pin input number.
 
-        const addInput = document.getElementById("addInput");
-        addInput.addEventListener("click", function(){
+            const addInput = document.getElementById("addInput");
+            addInput.addEventListener("click", function(){
             const showInputNumber = document.getElementById("showInput").value;
-           const showInput = parseFloat(addInput);
+            const showInput = parseFloat(addInput);
             const genaratePin = Math.random() * 10000;
             const result = Math.floor(genaratePin);
             document.getElementById("showInput").value = result;
@@ -72,7 +72,7 @@
         });
         //adding ten digit input number.
 
-       function inputNumber(number){
+          function inputNumber(number){
           let display = number
           document.getElementById('inputData').value+= display;
        }
@@ -85,11 +85,13 @@
             if(firstInputNumber === secondInputNumber){
                 document.getElementById("secondInput").style.display = 'block';
                 document.getElementById("firstInput").style.display = 'none';
+                document.getElementById("inputData").value = "";
 
             }
             else{
                 document.getElementById("firstInput").style.display = 'block';
                 document.getElementById("secondInput").style.display = 'none';
+                document.getElementById("inputData").value = "";
             }
            });
          
