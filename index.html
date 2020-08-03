@@ -65,34 +65,39 @@
             addInput.addEventListener("click", function(){
             const showInputNumber = document.getElementById("showInput").value;
             const showInput = parseFloat(addInput);
-            const genaratePin = Math.random() * 10000;
-            const result = Math.floor(genaratePin);
-            document.getElementById("showInput").value = result;
+            const generatePin = Math.floor(Math.random()*9000)+1000;
+            document.getElementById("showInput").value = generatePin;
 
         });
+
         //adding ten digit input number.
 
           function inputNumber(number){
           let display = number
-          document.getElementById('inputData').value+= display;
+          document.getElementById('inputData').value += display;
        }
+       
            // compare two input number.
-
+         
            document.getElementById("pinMatch").addEventListener("click", function(){
             const firstInputNumber = document.getElementById("showInput").value;
             const secondInputNumber = document.getElementById("inputData").value;
-                  
+             
+
             if(firstInputNumber === secondInputNumber){
                 document.getElementById("secondInput").style.display = 'block';
                 document.getElementById("firstInput").style.display = 'none';
                 document.getElementById("inputData").value = "";
+             
 
             }
             else{
                 document.getElementById("firstInput").style.display = 'block';
                 document.getElementById("secondInput").style.display = 'none';
                 document.getElementById("inputData").value = "";
+            
             }
+            
            });
          
         
