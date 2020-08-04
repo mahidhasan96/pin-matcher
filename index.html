@@ -84,7 +84,7 @@
             const firstInputNumber = document.getElementById("showInput").value;
             const secondInputNumber = document.getElementById("inputData").value;
             
-             if(firstInputNumber === ''){
+             if(firstInputNumber === '' || secondInputNumber === ''){
                  alert("please put input value");
 
              }
@@ -92,7 +92,9 @@
            else if(firstInputNumber === secondInputNumber){
                     document.getElementById("secondInput").style.display = 'block';
                     document.getElementById("firstInput").style.display = 'none';
+                    document.getElementById("showInput").value = "";
                     document.getElementById("inputData").value = "";
+            
              
 
             }
