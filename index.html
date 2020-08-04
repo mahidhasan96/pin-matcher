@@ -44,7 +44,7 @@
                             </div>
                             <div>
                                 <button id="pinMatch" type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <p id="tryLeft" class="action-left"><span id="decrement">3</span> try left</p>
                             </div>
                     </div>
                 </div>
@@ -78,12 +78,10 @@
        }
        
            // compare two input number.
-
-
            document.getElementById("pinMatch").addEventListener("click", function(){
-            const firstInputNumber = document.getElementById("showInput").value;
-            const secondInputNumber = document.getElementById("inputData").value;
-            
+            let firstInputNumber = document.getElementById("showInput").value;
+            let secondInputNumber = document.getElementById("inputData").value;
+          
              if(firstInputNumber === '' || secondInputNumber === ''){
                  alert("please put input value");
 
@@ -94,19 +92,47 @@
                     document.getElementById("firstInput").style.display = 'none';
                     document.getElementById("showInput").value = "";
                     document.getElementById("inputData").value = "";
-            
-             
 
             }
             else{
                 document.getElementById("firstInput").style.display = 'block';
                 document.getElementById("secondInput").style.display = 'none';
                 document.getElementById("inputData").value = "";
-            
+
             }
             
            });
-        
+                
+
+        //    document.getElementById("pinMatch").addEventListener("click", function(){
+        //     let firstInputNumber = document.getElementById("showInput").value;
+        //     let secondInputNumber = document.getElementById("inputData").value;
+        //     let tryLeft = document.getElementById("tryLeft");
+            
+        //      if(firstInputNumber === '' || secondInputNumber === ''){
+        //          alert("please put input value");
+
+        //      }
+
+        //    else if(firstInputNumber === secondInputNumber){
+        //             document.getElementById("secondInput").style.display = 'block';
+        //             document.getElementById("firstInput").style.display = 'none';
+        //             document.getElementById("showInput").value = "";
+        //             document.getElementById("inputData").value = "";
+            
+             
+
+        //     }
+        //     else{
+        //         document.getElementById("firstInput").style.display = 'block';
+        //         document.getElementById("secondInput").style.display = 'none';
+        //         document.getElementById("inputData").value = "";
+            
+        //     }
+            
+        //    });
+                
+          
     </Script>
     
 </body>
