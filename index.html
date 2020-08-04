@@ -81,6 +81,7 @@
            document.getElementById("pinMatch").addEventListener("click", function(){
             let firstInputNumber = document.getElementById("showInput").value;
             let secondInputNumber = document.getElementById("inputData").value;
+            let tryLeft = document.getElementById("tryLeft");
           
              if(firstInputNumber === '' || secondInputNumber === ''){
                  alert("please put input value");
@@ -98,39 +99,18 @@
                 document.getElementById("firstInput").style.display = 'block';
                 document.getElementById("secondInput").style.display = 'none';
                 document.getElementById("inputData").value = "";
-
+                var spanNumber = document.getElementById('decrement').innerText;
+            if(spanNumber > 0 ){ 
+                    document.getElementById('try-count').innerText = spanNumber -1;
+                }
+                if(spanNumber == 1){ 
+                    document.getElementById('submit-btn').style.background = 'green';
+                    document.getElementById('submit-btn').disabled = true;
+                }
+                
             }
             
            });
-                
-
-        //    document.getElementById("pinMatch").addEventListener("click", function(){
-        //     let firstInputNumber = document.getElementById("showInput").value;
-        //     let secondInputNumber = document.getElementById("inputData").value;
-        //     let tryLeft = document.getElementById("tryLeft");
-            
-        //      if(firstInputNumber === '' || secondInputNumber === ''){
-        //          alert("please put input value");
-
-        //      }
-
-        //    else if(firstInputNumber === secondInputNumber){
-        //             document.getElementById("secondInput").style.display = 'block';
-        //             document.getElementById("firstInput").style.display = 'none';
-        //             document.getElementById("showInput").value = "";
-        //             document.getElementById("inputData").value = "";
-            
-             
-
-        //     }
-        //     else{
-        //         document.getElementById("firstInput").style.display = 'block';
-        //         document.getElementById("secondInput").style.display = 'none';
-        //         document.getElementById("inputData").value = "";
-            
-        //     }
-            
-        //    });
                 
           
     </Script>
