@@ -78,16 +78,21 @@
        }
        
            // compare two input number.
-         
+
+
            document.getElementById("pinMatch").addEventListener("click", function(){
             const firstInputNumber = document.getElementById("showInput").value;
             const secondInputNumber = document.getElementById("inputData").value;
-             
+            
+             if(firstInputNumber === ''){
+                 alert("please put input value");
 
-            if(firstInputNumber === secondInputNumber){
-                document.getElementById("secondInput").style.display = 'block';
-                document.getElementById("firstInput").style.display = 'none';
-                document.getElementById("inputData").value = "";
+             }
+
+           else if(firstInputNumber === secondInputNumber){
+                    document.getElementById("secondInput").style.display = 'block';
+                    document.getElementById("firstInput").style.display = 'none';
+                    document.getElementById("inputData").value = "";
              
 
             }
@@ -99,7 +104,6 @@
             }
             
            });
-         
         
     </Script>
     
